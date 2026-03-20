@@ -446,36 +446,31 @@ Enjoy your day, you deserve it!`;
   }, { once: true });
 </script>
     <script>
-  // Kalimat kamu pindah ke sini (di dalam JavaScript)
-  const pesanLengkap = "Terimakasih yaa kamu selalu nemenin aku setiap hari, selain tuhan dan orang tua aku, kamu adalah salah satu orang
-          yang menjadi alasan ku untuk hidup, mungkin beberapa kali aku selalu mengecewakan mu, tapi aku selalu berusaha ngasih yang
-          terbaik buat kamu dan berusaha ngga ngebuat kamu kecewa. aku bener bener sayang sama kamu dan terimakasih buat semuanya.
-          hari ini adalah hari nya linda dan linda mulai memasuki umur yang bisa dibilang cukup rumit, aku pasti selalu ngedoain
-          kamu kok, aku tetep disini selalu bantu kamu kapan pun, make a wish yaa buat usia sekarang dan semoga bisa menjadi yang
-          lebih baik dari sebelumnya, panjang umur dan sehat selalu yaa linda, i lovee uu.";
+  const pesanLengkap = "Terimakasih yaa kamu selalu nemenin aku setiap hari, selain tuhan dan orang tua aku, kamu adalah salah satu orang yang menjadi alasan ku untuk hidup, mungkin beberapa kali aku selalu mengecewakan mu, tapi aku selalu berusaha ngasih ya terbaik buat kamu dan berusaha ngga ngebuat kamu kecewa. aku bener bener sayang sama kamu dan terimakasih buat semuanya. hari ini adalah hari nya linda dan linda mulai memasuki umur yang bisa dibilang cukup rumit, aku pasti selalu ngedoain kamu kok, aku tetep disini selalu bantu kamu kapan pun. make a wish yaa buat usia sekarang dan semoga bisa menjadi yang lebih baik dari sebelumnya, panjang umur dan sehat selalu yaa linda, i lovee uu.";
   
   let karakterKe = 0;
   let animasiAktif = false;
 
   function mulaiNgetik() {
-    if (karakterKe < pesanLengkap.length) {
-      document.getElementById("typing-memory").innerHTML += pesanLengkap.charAt(karakterKe);
+    const wadah = document.getElementById("typing-memory");
+    if (wadah && karakterKe < pesanLengkap.length) {
+      wadah.innerHTML += pesanLengkap.charAt(karakterKe);
       karakterKe++;
-      setTimeout(mulaiNgetik, 40); // 40ms adalah kecepatan ketik
+      setTimeout(mulaiNgetik, 40); 
     }
   }
 
-  // Memicu animasi saat tombol "Next" dari halaman Birthday diklik
-  const btnKeMemori = document.querySelector('button[onclick*="memoryPage"]');
-  if(btnKeMemori) {
-    btnKeMemori.addEventListener('click', function() {
-      if(!animasiAktif) {
-        document.getElementById("typing-memory").innerHTML = ""; 
-        setTimeout(mulaiNgetik, 1000); // Tunggu 1 detik agar transisi halaman mulus
+  // Cara yang lebih pasti untuk mendeteksi klik tombol Next di halaman Birthday
+  document.addEventListener('click', function (e) {
+    if (e.target && e.target.getAttribute('onclick') && e.target.getAttribute('onclick').includes('memoryPage')) {
+      if (!animasiAktif) {
+        const wadah = document.getElementById("typing-memory");
+        if (wadah) wadah.innerHTML = ""; 
+        setTimeout(mulaiNgetik, 1000); 
         animasiAktif = true;
       }
-    });
-  }
+    }
+  });
     </script>
   </body>
 </html>
