@@ -219,7 +219,7 @@
           <div class="key">8</div>
           <div class="key">9</div>
           <div></div>
-          <div class="key">212609</div>
+          <div class="key">0</div>
           <div></div>
         </div>
         <p id="pinMessage"></p>
@@ -229,7 +229,7 @@
     <!-- GAME -->
     <div class="page" id="gamePage">
       <div class="card">
-        <h1>Catch 5 Hearts 💕</h1>
+        <h1>Tangkep 5 hati dulu 💕</h1>
         <p>Score: <span id="score">0</span> / 5</p>
         <div id="gameArea"></div>
       </div>
@@ -238,8 +238,8 @@
     <!-- WIN POPUP -->
     <div id="winPopup">
       <div class="win-box">
-        <h1>You Win 💕</h1>
-        <p>You caught my heart again 🥺💗</p>
+        <h1>Linda Menang 💕</h1>
+        <p>Cie kamu dapet hati akuu 🥺💗</p>
         <button onclick="goBirthday()">Open Your Surprise 🎁</button>
       </div>
     </div>
@@ -247,7 +247,7 @@
     <!-- BIRTHDAY -->
     <div class="page" id="birthdayPage">
       <div class="card">
-        <h1>Happy Birthday My Love 🥺💖</h1>
+        <h1>Selamat Ulang Tahun Cintaa 🥺💖</h1>
         <div id="letter"></div>
         <button onclick="nextPage('memoryPage')">Next 💗</button>
       </div>
@@ -256,7 +256,7 @@
     <!-- MEMORY -->
     <div class="page" id="memoryPage">
       <div class="card">
-        <h1>Our Memory 🥰✨</h1>
+        <h1>Memori 🥰✨</h1>
         <div class="slide">
           <img
             src="https://i.pinimg.com/736x/51/bf/74/51bf74803569ce1fbf9d5a8f268b624e.jpg"
@@ -284,7 +284,7 @@
     <!-- MUSIC -->
     <div class="page" id="musicPage">
       <div class="card">
-        <h1>Music For U 🎶</h1>
+        <h1>Lagu buat kamu 🎶</h1>
         <div class="music-card">
           <iframe
             src="https://open.spotify.com/embed/track/6tIoXcKI2qpMsXCdFP3Gi0?utm_source=generator"
@@ -319,7 +319,7 @@
       }
 
       /* LOADING */
-      let text = "Preparing something sweet for you 🥰💌";
+      let text = "sabar yaa, re lagi nyiapin sesuatu 🥰💌";
       let i = 0;
       function typeLoad() {
         if (i < text.length) {
@@ -343,11 +343,11 @@
               "*",
             );
             if (input.length == 6) {
-              if (input === "000000") {
+              if (input === "212609") {
                 setTimeout(() => startGame(), 400);
               } else {
                 document.getElementById("pinMessage").innerText =
-                  "Wrong PIN 🥺";
+                  "Pinnya Salah 🥺";
                 input = "";
                 document.getElementById("pinDisplay").innerText = "____";
               }
@@ -400,16 +400,12 @@
       }
 
       /* LETTER */
-      let letterText = `Hai cintaku 💕
+      let letterText = `Halo lindaa 💕
 
-Hari ini dunia jadi lebih indah karena kamu lahir.
-Terima kasih sudah hadir di hidup aku.
-
-Aku bangga sama kamu.
-Aku sayang kamu.
-Dan aku selalu doakan yang terbaik buat kamu.
-
-Happy birthday my sweetest human 💗`;
+Happy level up dayy, happy birthday, lindaa! 
+I'm really grateful to have you in my life, someone who understands me, supports me, and brings so much joy into my days. 
+Cheers to another year of growing, laughing, and being chaotic together hope this year treats you kindly and gives you everything you've been wishing for. 
+Enjoy your day, you deserve it!`;
       let j = 0;
       function startLetter() {
         j = 0;
