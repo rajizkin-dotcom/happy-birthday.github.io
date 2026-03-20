@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Happy Birthday 💕</title>
+    <title>Selamaf Ulang Tahun 💕</title>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Quicksand:wght@400;600&display=swap"
@@ -206,7 +206,7 @@
     <!-- PIN -->
     <div class="page" id="pinPage">
       <div class="card">
-        <h1>Enter PIN 💗</h1>
+        <h1>Masukin Pinnya 💗</h1>
         <div class="pin-display" id="pinDisplay">______</div>
         <div class="keypad">
           <div class="key">1</div>
@@ -229,7 +229,7 @@
     <!-- GAME -->
     <div class="page" id="gamePage">
       <div class="card">
-        <h1>Catch 5 Hearts 💕</h1>
+        <h1>Tangkep 5 hati dulu yaa 💕</h1>
         <p>Score: <span id="score">0</span> / 5</p>
         <div id="gameArea"></div>
       </div>
@@ -238,16 +238,16 @@
     <!-- WIN POPUP -->
     <div id="winPopup">
       <div class="win-box">
-        <h1>You Win 💕</h1>
-        <p>You caught my heart again 🥺💗</p>
-        <button onclick="goBirthday()">Open Your Surprise 🎁</button>
+        <h1>linda menang 💕</h1>
+        <p>cie kamu dapet hati aku 🥺💗</p>
+        <button onclick="goBirthday()">Buka hadiah mu 🎁</button>
       </div>
     </div>
 
     <!-- BIRTHDAY -->
     <div class="page" id="birthdayPage">
       <div class="card">
-        <h1>Happy Birthday My Love 🥺💖</h1>
+        <h1>Selamat Ulang Tahun Mami Nur Maulinda 🥺💖</h1>
         <div id="letter"></div>
         <button onclick="nextPage('memoryPage')">Next 💗</button>
       </div>
@@ -256,7 +256,7 @@
     <!-- MEMORY -->
     <div class="page" id="memoryPage">
       <div class="card">
-        <h1>Our Memory 🥰✨</h1>
+        <h1>Memori kitaa 🥰✨</h1>
         <div class="slide">
           <img
             src="https://i.pinimg.com/736x/51/bf/74/51bf74803569ce1fbf9d5a8f268b624e.jpg"
@@ -319,7 +319,7 @@
       }
 
       /* LOADING */
-      let text = "Preparing something sweet for you 🥰💌";
+      let text = "sabarr yaa re lagi nyiapin sesuatu buat kamu 🥰💌";
       let i = 0;
       function typeLoad() {
         if (i < text.length) {
@@ -347,7 +347,7 @@
                 setTimeout(() => startGame(), 400);
               } else {
                 document.getElementById("pinMessage").innerText =
-                  "Wrong PIN 🥺";
+                  "Pinnya Salah 🥺";
                 input = "";
                 document.getElementById("pinDisplay").innerText = "____";
               }
